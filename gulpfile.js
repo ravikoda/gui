@@ -1,0 +1,14 @@
+var  gulp = require('gulp');
+var uglify = require('gulp-uglify');
+
+////////////////////////////////////////////////////////////////////////
+/// scrip task
+////////////////////////////////////////////////////////////////////////
+
+gulp.task('script', function (){
+
+    gulp.src('app/js/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/app/js/'));
+
+});
